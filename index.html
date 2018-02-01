@@ -12,11 +12,9 @@ var parseQueryString = function(url) {
   return urlParams;
 }
 
-
-
 var urlToParse = location.search;  
 var result = parseQueryString(urlToParse );  
-console.info(JSON.stringify(result)); 
+var symbol = result['symbol']
   
 </script>
 
@@ -27,7 +25,7 @@ console.info(JSON.stringify(result));
 new TradingView.widget({
   "width": 980,
   "height": 610,
-  "symbol": "BINANCE:QTUMBTC",
+  "symbol": symbol,
   "interval": "D",
   "timezone": "Etc/UTC",
   "theme": "Light",
