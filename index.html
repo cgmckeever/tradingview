@@ -26,9 +26,9 @@ var urlToParse = location.search;
 var params = parseQueryString(urlToParse);  
   
 var pair = params.pair;
-var ticker = params.ticker;
-var tradingView = "Binance:" + params.ticker + params.pair;
-var binance = params.ticker + "_" + params.pair
+var name = params.name;
+var tradingView = "Binance:" + params.name + params.pair;
+var binance = params.name + "_" + params.pair
   
 var binanceURL = "https://www.binance.com/trade.html?symbol=" + binance;
 document.getElementById('binanceLink').href = binanceURL;
