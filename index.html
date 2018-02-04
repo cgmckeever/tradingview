@@ -16,8 +16,7 @@ var parseQueryString = function(url) {
 
 var urlToParse = location.search;  
 var result = parseQueryString(urlToParse);  
-// var fields = result.symbol.split(':')
-// console.info(fields[1]);  
+var fields = result.symbol.split(':')
   
 new TradingView.widget({
   "width": 980,
