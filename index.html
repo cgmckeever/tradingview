@@ -25,9 +25,14 @@ var parseQueryString = function(url) {
 var urlToParse = location.search;  
 var params = parseQueryString(urlToParse);  
   
-var binanceURL = "https://www.binance.com/trade.html?symbol=" + params.binance;
+var pair = params.pair;
+var ticker = params.ticker;
+var tradingView = "Binance:" + params.ticker + params.pair;
+var binance = params.ticker + "_" + params.pair
+  
+var binanceURL = "https://www.binance.com/trade.html?symbol=" + binance;
 document.getElementById('binanceLink').href = binanceURL;
-document.getElementById("ticker").textContent=params.binance;
+document.getElementById("ticker").textContent=binance;
   
 new TradingView.widget({
   "width": 980,
@@ -37,7 +42,7 @@ new TradingView.widget({
   "theme": "Light",
   "style": "1",
   "locale": "en",
-  "symbol": ticker,
+  "symbol": tradingView,
   "toolbar_bg": "#f1f3f6",
   "enable_publishing": true,
   "withdateranges": true,
