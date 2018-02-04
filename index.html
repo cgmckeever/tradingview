@@ -1,3 +1,7 @@
+<a href="https://www.binance.com/trade.html?symbol=" onclick="this.href += params.binance'" target="_blank">Binance</a>
+
+
+
 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 
 <script type="text/javascript">
@@ -15,8 +19,7 @@ var parseQueryString = function(url) {
 }
 
 var urlToParse = location.search;  
-var result = parseQueryString(urlToParse);  
-var fields = result.symbol.split(':')
+var params = parseQueryString(urlToParse);  
   
 new TradingView.widget({
   "width": 980,
