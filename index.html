@@ -15,8 +15,9 @@ var parseQueryString = function(url) {
 }
 
 var urlToParse = location.search;  
-var result = parseQueryString(urlToParse );  
-console.info(JSON.stringify(result));  
+var result = JSON.stringify(parseQueryString(urlToParse));  
+var fields = result.symbol.split(':')
+console.info(fileds[1]);  
   
 new TradingView.widget({
   "width": 980,
