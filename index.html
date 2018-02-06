@@ -29,6 +29,8 @@ var pair = params.pair;
 var name = params.name;
 var tradingView = "Binance:" + params.name + params.pair;
 var binance = params.name + "_" + params.pair
+var interval = params.interval
+if interval === null interval = "5"
   
 var binanceURL = "https://www.binance.com/trade.html?symbol=" + binance;
 document.getElementById('binanceLink').href = binanceURL;
@@ -37,7 +39,7 @@ document.getElementById("ticker").textContent=binance;
 new TradingView.widget({
   "width": 980,
   "height": 610,
-  "interval": "5",
+  "interval": interval.toString(),
   "timezone": "Etc/UTC",
   "theme": "Light",
   "style": "1",
