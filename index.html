@@ -30,7 +30,7 @@ var name = params.name;
 var tradingView = "Binance:" + params.name + params.pair;
 var binance = params.name + "_" + params.pair
 var interval = params.interval
-if interval === null interval = "5"
+if (interval === null) interval = "5"
   
 var binanceURL = "https://www.binance.com/trade.html?symbol=" + binance;
 document.getElementById('binanceLink').href = binanceURL;
